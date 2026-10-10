@@ -1,5 +1,24 @@
 # OpenPuck
 
+## Unofficial modification: redcoins 0.9.60
+
+This repository contains a personal modification of
+[safijari/openpuck](https://github.com/safijari/openpuck), based on upstream
+`0.9.59`. **`0.9.60` here identifies the redcoins modification; it is not an
+official upstream release.**
+
+Modified on **2026-10-10**: prevent repeated Steam controller connection reports
+when a USB IN endpoint is temporarily busy. The change and regression tests were
+added in firmware commit `c56533491e58e532621d525e2871babfd2e866bc`.
+
+The modification is provided under the **GNU Affero General Public License,
+version 3 (AGPLv3)**; the original [LICENSE](./LICENSE), copyright notices, and
+upstream acknowledgements are retained. See the
+[modification and firmware build notes](./docs/UNOFFICIAL_0.9.60.md) for the
+test evidence, its limits, the UF2 source identity, and distribution conditions.
+
+The project description below is retained from the upstream README.
+
 [![BuyMeACoffee](https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-yellow.svg)](https://github.com/safijari/openpuck/discussions/211)
 
 OpenPuck is an opensource firmware for NRF52840 Pro Micro that copycats the Steam Controller 2 Puck and allows emulation of Xbox, Original Xbox, Switch, and PS3/4/5 controllers and also includes an independant lizard mode (which can work on UAC prompts/task manager/etc). The Switch, PS3, and Original Xbox modes have been verified to work on real consoles and Switch, PS4/5 modes have gyro (and touchpad where available) hooked in. Back 4 buttons are mappable for all emulated modes.
