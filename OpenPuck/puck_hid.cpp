@@ -1056,8 +1056,9 @@ void SteamPuckController::task()
 			last43[s] = millis();
 		}
 	}
-	// Reset edge state for slots that are no longer used/ready (so a re-bond sees a fresh edge).
+	// A busy IN endpoint is still connected; only a USB unmount or
+	// removed bond requires a fresh connection edge.
 	for (int s = 0; s < NSLOT; s++)
-		if (!g_slot[s].used || !hid[s].ready())
+		if (!g_slot[s].used || !USBDevice.mounted())
 			usbConn[s] = false;
 }
